@@ -14,7 +14,8 @@ class RecipesController < ApplicationController
     if recipe.save
       redirect_to "/recipes"
     else
-
+      redirect_to "/recipes/new"
+      flash[:warning] = "Invalid entry"
     end
   end
 

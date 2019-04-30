@@ -19,4 +19,5 @@ Recipe.create(name: Minestrone, ingredients: "4 medium tomatoes, 1/2 cup tomato 
   Next add the zucchini, chick peas, and pasta to the pot. Bring to a boil. Once it comes
   to a boil, reduce the heat to low, cover, and simmer fo 20 minutes.
 
-  After that add some fresh basil and serve.")
+  After that add some fresh basil and serve.",
+  notes: "You can use water or oil to sautee veggies.")

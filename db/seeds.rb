@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Recipe.create(name: Minestrone, ingredients: "4 medium tomatoes, 1/2 cup tomato paste,
+Recipe.create(name: "Minestrone", ingredients: "4 medium tomatoes, 1/2 cup tomato paste,
   2 medium zucchini, 2 medium carrots, 2 stalks celery, 1 can chick peas (garbonzo beans), 4 cups veggie broth, 5 oz pasta, 2 tbsp basil",
   directions: "Chop the carrots, celery, and tomatoes into bite size pieces.
 

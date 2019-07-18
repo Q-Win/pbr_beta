@@ -12,9 +12,13 @@ RSpec.describe "recipe_index", type: :feature do
 
     visit "/login"
 
-    expect(page).to have_content("Username")
+    expect(page).to have_content("Name")
     expect(page).to have_content("Password")
-  
+
+    fill_in :name, with: "Bob"
+    fill_in :password, with: "bobrulez"
+    click_button 'Login'
+    expect(current_path).to eq(root_path)
 
   end
 end

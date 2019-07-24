@@ -5,7 +5,11 @@ class RecipesController < ApplicationController
   end
 
   def new
-    @recipe = Recipe.new
+    if current_admin?
+      @recipe = Recipe.new
+    else
+      redirect_to "/recipes"
+    end
   end
 
   def show

@@ -22,7 +22,7 @@ RSpec.describe "recipe_index", type: :feature do
 
   end
 
-  it "user can login" do
+  it "user can NOT login with wrong info" do
 
     visit "/login"
 
@@ -30,9 +30,24 @@ RSpec.describe "recipe_index", type: :feature do
     expect(page).to have_content("Password")
 
     fill_in :name, with: "Bob"
-    fill_in :password, with: "bobrules"
+    fill_in :password, with: "bobrule"
     click_button 'Login'
     expect(current_path).to eq("/login")
 
   end
+
+  xit "user can log out" do
+
+    visit "/login"
+
+    expect(page).to have_content("Name")
+    expect(page).to have_content("Password")
+
+    fill_in :name, with: "Bob"
+    fill_in :password, with: "bobrulez"
+    click_button 'Login'
+    expect(current_path).to eq(root_path)
+
+  end
+
 end

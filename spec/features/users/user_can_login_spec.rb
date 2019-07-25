@@ -36,7 +36,7 @@ RSpec.describe "recipe_index", type: :feature do
 
   end
 
-  xit "user can log out" do
+  it "user can log out" do
 
     visit "/login"
 
@@ -47,6 +47,10 @@ RSpec.describe "recipe_index", type: :feature do
     fill_in :password, with: "bobrulez"
     click_button 'Login'
     expect(current_path).to eq(root_path)
+
+    visit "/recipes"
+
+    expect(page).to have_button("Log Out")
 
   end
 

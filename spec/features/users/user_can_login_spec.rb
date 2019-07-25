@@ -52,7 +52,9 @@ RSpec.describe "recipe_index", type: :feature do
     visit "/recipes"
 
     expect(page).to have_button("Log Out")
+    click_button 'Log Out'
 
+    expect(page).to have_button("Sign In")
   end
 
 end

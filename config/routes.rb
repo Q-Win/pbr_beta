@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'recipes#index'
   get '/login', to: 'session#new'
   post '/login', to: 'session#create'
+  delete '/logout', to: 'session#destroy'
 
   resources :recipes, only: [:index, :create, :update, :new, :show]
 end

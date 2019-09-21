@@ -12,6 +12,14 @@ class RecipesController < ApplicationController
     end
   end
 
+  def edit
+    if current_admin?
+      @recipe = Recipe.find(params[:id])
+    else
+      redirect_to "/recipes"
+    end
+  end
+
   def show
     @recipe = Recipe.find(params[:id])
   end

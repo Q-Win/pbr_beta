@@ -1,0 +1,15 @@
+<%= form_for @recipe do |r| %>
+   <%= r.label :name, "Name" %>
+   <%= r.text_field :name %>
+   <%= r.label :ingredients, "Ingredients" %>
+   <%= r.text_area :ingredients %>
+   <%= r.label :directions, "Directions"%>
+   <%= r.text_area :directions %>
+   <%= r.label :gif, "Gif" %>
+   <%= r.text_field :gif %>
+   <%= r.label :video, "Video" %>
+   <%= r.text_field :video %>
+   <%= r.label :link, "Link" %>
+   <%= r.text_field :link %>
+   <%= r.submit  %>
+ <%end%>

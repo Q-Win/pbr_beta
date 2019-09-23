@@ -16,7 +16,9 @@ RSpec.describe "recipe_index", type: :feature do
     fill_in :name, with: "Bob"
     fill_in :password, with: "bobrulez"
     click_button 'Login'
+    click_button 'Home'
 
+    expect(current_path).to eq(user_path(@user_1))
   end
 
 

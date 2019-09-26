@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_01_214434) do
+ActiveRecord::Schema.define(version: 2019_09_25_232405) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "favorites", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "recipe_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_favorites_on_recipe_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
 
   create_table "recipes", force: :cascade do |t|
     t.string "name"
@@ -31,4 +40,6 @@ ActiveRecord::Schema.define(version: 2019_05_01_214434) do
     t.integer "role", default: 0
   end
 
+  add_foreign_key "favorites", "recipes"
+  add_foreign_key "favorites", "users"
 end

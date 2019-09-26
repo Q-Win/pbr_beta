@@ -5,7 +5,6 @@ class UsersController < ApplicationController
     redirect_to root_path
     end
     @user = current_user
-    @favorites = @user.get_favorites
   end
 
 end

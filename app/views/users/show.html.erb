@@ -1,1 +1,9 @@
 <h1> Welcome <%= @user.name %> </h1>
+
+<h2> Favorites </h2>
+
+<ul>
+  <% @favorites.each do |favorite| %>
+    <li><a href="recipes/<%=favorite.id%>"><%=favorite.name  %></a></li>
+  <% end %>
+</ul>

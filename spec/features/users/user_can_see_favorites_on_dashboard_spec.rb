@@ -19,9 +19,9 @@ RSpec.describe "recipe_index", type: :feature do
     click_button 'Login'
     click_button 'Home'
 
-    
+
     expect(current_path).to eq(user_path(@user_1))
-    expect(page).to have_content("cookies")
+    expect(page).to have_content("muffins")
   end
 
 

@@ -11,6 +11,8 @@ describe Recipe, type: :model do
   before(:each) do
     @recipe_1 = Recipe.create(name: "cookies", ingredients: "flour, sugar", directions: "mix", notes: "is this here")
     @recipe_2 = Recipe.create(name: "muffins", ingredients: "flour, sugar", directions: "mix", notes: "is this here")
+    @user_1 = User.create(name: "Bob", password: "bobrulez")
+    @favorite = Favorite.create(user_id: @user_1.id, recipe_id: @recipe_2.id)
   end
 
   it 'make an array of the ingredients' do
@@ -21,7 +23,8 @@ describe Recipe, type: :model do
   it 'can tell if a user has set a recipe to their favorites' do
 
 
-    expect(@recipe_2.favorite?(@user_1)).to eq(true)
+    expect(@recipe_2.favorite?(@user_1.id)).to eq(true)
+    expect(@recipe_1.favorite?(@user_1.id)).to eq(false)
   end
 
 end

@@ -9,4 +9,8 @@ class Recipe < ApplicationRecord
     ingredients.split(",")
   end
 
+  def favorite?(user)
+    true
+  end
+
 end

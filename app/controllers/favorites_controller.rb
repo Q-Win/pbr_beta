@@ -6,8 +6,9 @@ class FavoritesController < ApplicationController
 
 
   def create
-    favorite = Favorite.new(favorite_params)
 
+    favorite = Favorite.new(recipe_id: params[:recipe_id].to_i, user_id: current_user.id)
+    
     if favorite.save
       redirect_to "/recipes"
     else
@@ -19,7 +20,7 @@ class FavoritesController < ApplicationController
   private
 
   def favorite_params
-    params.require(:recipe).permit(:user_id, :recipe_id)
+    params.require(:favorite).permit(:user_id, :recipe_id)
   end
 
 end

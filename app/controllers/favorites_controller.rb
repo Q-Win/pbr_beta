@@ -11,7 +11,7 @@ class FavoritesController < ApplicationController
     if favorite.save
       redirect_to "/recipes"
     else
-      redirect_to "/recipes/new"
+      redirect_to "/recipes/#{favorite_params[:recipe_id]}"
       flash[:warning] = "Invalid entry"
     end
   end

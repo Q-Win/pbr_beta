@@ -18,7 +18,7 @@ RSpec.describe "recipe_index", type: :feature do
 
     visit "/recipes/#{recipe_2.id}"
 
-    expect(page).to have_content("Add to Favorites")
+    expect(page).to have_button("Add to Favorites")
 
 
   end

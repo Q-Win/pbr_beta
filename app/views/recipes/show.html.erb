@@ -1,4 +1,9 @@
+<div>
 <h1><%= @recipe.name %> </h1>
+<% if current_user != nil %>
+  <%= button_to "Add to Favorites", favorites_path, params: {recipe_id: params[:id]} %>
+<%end%>
+</div>
 
 <p>
   <h2> Ingredients </h2>

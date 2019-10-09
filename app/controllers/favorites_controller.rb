@@ -8,7 +8,7 @@ class FavoritesController < ApplicationController
   def create
 
     favorite = Favorite.new(recipe_id: params[:recipe_id].to_i, user_id: current_user.id)
-    #appears to be work. Need to add favorites to user show page with test. Also need to add uniqueness to Favorites. Also to need to add logic only show button if Favorite doesnt exist. Also reconsider redirects.
+    # Also need to add uniqueness to Favorites.  Also reconsider redirects.
     if favorite.save
       redirect_to "/recipes"
     else

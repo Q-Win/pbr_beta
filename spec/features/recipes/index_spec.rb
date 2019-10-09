@@ -12,13 +12,13 @@ RSpec.describe "recipe_index", type: :feature do
 
   end
 
-  it "user_can_favorite a recipe" do
+  it "user cannot favorite recipe if not logged in" do
       recipe_1 = Recipe.create(name: "Cookies", ingredients: "flour, sugar", directions: "mix well" )
       recipe_2 = Recipe.create(name: "stew", ingredients: "water, carrots", directions: "simmer" )
 
     visit "/recipes/#{recipe_2.id}"
 
-    expect(page).to have_button("Add to Favorites")
+    expect(page).to have_no_button("Add to Favorites")
 
 
   end

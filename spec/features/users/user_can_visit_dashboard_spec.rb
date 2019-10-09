@@ -21,6 +21,19 @@ RSpec.describe "recipe_index", type: :feature do
     expect(current_path).to eq(user_path(@user_1))
   end
 
+  it "user can add favorite" do
+    visit recipes_path
+    click_button 'Sign In'
+    fill_in :name, with: "Bob"
+    fill_in :password, with: "bobrulez"
+    click_button 'Login'
+    visit recipe_path(@recipe_2)
+    click_button 'Add to Favorites'
+    visit user_path(@user_1)
+
+    expect(page).to have_content("muffins")
+  end
+
 
 
 end

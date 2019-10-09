@@ -8,7 +8,7 @@ class FavoritesController < ApplicationController
   def create
 
     favorite = Favorite.new(recipe_id: params[:recipe_id].to_i, user_id: current_user.id)
-    
+    # Also need to add uniqueness to Favorites.  Also reconsider redirects.
     if favorite.save
       redirect_to "/recipes"
     else

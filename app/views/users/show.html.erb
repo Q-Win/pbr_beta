@@ -4,6 +4,6 @@
 
 <ul>
   <% @favorites.each do |favorite| %>
-    <li><a href="/recipes/<%=favorite.id%>"><%=favorite.name  %></a> <%= button_to "Remove Favorite", favorites_path %></li>
+    <li><a href="/recipes/<%=favorite.id%>"><%=favorite.name  %></a> <%= button_to "Remove Favorite", favorites_path(favorite), method: :delete %></li>
   <% end %>
 </ul>

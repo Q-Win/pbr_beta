@@ -22,7 +22,7 @@ RSpec.describe "recipe_index", type: :feature do
 
     expect(current_path).to eq(user_path(@user_1))
     expect(page).to have_content("muffins")
-    expect(page).to have_content("Remove Favorite")
+    expect(page).to have_button("Remove Favorite")
   end
 
 

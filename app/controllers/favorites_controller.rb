@@ -18,7 +18,10 @@ class FavoritesController < ApplicationController
   end
 
   def destroy
- binding.pry
+    favorite_id =Favorite.where(user_id: current_user.id, recipe_id: params['recipe_id']).pluck(:id)
+    favorite = Favorite.find(favorite_id[0])
+    favorite.delete
+    redirect_back(fallback_location: root_path)
   end
 
   private

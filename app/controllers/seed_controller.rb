@@ -1,4 +1,4 @@
-class SessionController < ApplicationController
+class SeedController < ApplicationController
 
   def index
 

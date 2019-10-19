@@ -40,7 +40,9 @@ Recipe.create(name: "Mashed Potatoes", ingredients: "2 pounds potatoes, 1 cup so
   notes: "You can peel or not peel the potatoes.")
 
 recipes = [
-            {name: "Split Pea Soup", ingredients: "8 cups veggie broth, 1 pound split green peas, 1 lb potaoes, 2 cups diced carrots, 1 onion, 5 cloves garlic, salt, pepper, ", directions: "Dice potatoes, onions, carrots, and garlic. Saute onions, carrots, and garlic in oil or water to soften them. Should take 5-10 minutes. Then add peas, broth, and poatoes to pot. Bring to a boil. Cover and simmer for 45-55 minutes."}
+            {name: "Split Pea Soup", ingredients: "8 cups veggie broth, 1 pound split green peas, 1 lb potaoes, 2 cups diced carrots, 1 onion, 5 cloves garlic, salt, pepper ", directions: "Dice potatoes, onions, carrots, and garlic. Saute onions, carrots, and garlic in oil or water to soften them. Should take 5-10 minutes. Then add peas, broth, and poatoes to pot. Bring to a boil. Cover and simmer for 45-55 minutes."},
+            {name: "Jerk Lentils", ingredients: "1 lb dry lentils ", directions: "Dice potatoes, onions, carrots, and garlic. Saute onions, carrots, and garlic in oil or water to soften them. Should take 5-10 minutes. Then add peas, broth, and poatoes to pot. Bring to a boil. Cover and simmer for 45-55 minutes."},
+            {name: "Nacho Cheese", ingredients: "8 cups veggie broth, 1 pound split green peas, 1 lb potaoes, 2 cups diced carrots, 1 onion, 5 cloves garlic, salt, pepper, ", directions: "Dice potatoes, onions, carrots, and garlic. Saute onions, carrots, and garlic in oil or water to soften them. Should take 5-10 minutes. Then add peas, broth, and poatoes to pot. Bring to a boil. Cover and simmer for 45-55 minutes."}
           ]
 
 recipes.each do |r|

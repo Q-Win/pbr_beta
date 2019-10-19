@@ -38,3 +38,11 @@ Recipe.create(name: "Pumpkin Bread", ingredients: "2 cups whole wheat flour, 1 c
 Recipe.create(name: "Mashed Potatoes", ingredients: "2 pounds potatoes, 1 cup soy milk, salt, pepper",
   directions: "Cut potatoes into 1 inch pieces. Boil for around 25 minutes or until soft. Mash with hand masher or electric. ",
   notes: "You can peel or not peel the potatoes.")
+
+recipes = [
+            {name: "Split Pea Soup", ingredients: "8 cups veggie broth, 1 pound split green peas, 1 lb potaoes, 2 cups diced carrots, 1 onion, 5 cloves garlic, salt, pepper, ", directions: "Dice potatoes, onions, carrots, and garlic. Saute onions, carrots, and garlic in oil or water to soften them. Should take 5-10 minutes. Then add peas, broth, and poatoes to pot. Bring to a boil. Cover and simmer for 45-55 minutes."}
+          ]
+
+recipes.each do |r|
+  Recipe.create(r)
+end

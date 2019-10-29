@@ -20,6 +20,10 @@ class RecipesController < ApplicationController
     end
   end
 
+  def update
+
+  end 
+
   def show
     @recipe = Recipe.find(params[:id])
   end

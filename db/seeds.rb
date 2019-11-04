@@ -10,6 +10,8 @@ User.create(name: "ted", password: "test", role: 1)
 
 User.create(name: "bob", password: "test", role: 0)
 
+User.create(name: "john", password: "test", role: 1)
+
 Recipe.create(name: "Minestrone", ingredients: "4 medium tomatoes, 1/2 cup tomato paste,
   2 medium zucchini, 2 medium carrots, 2 stalks celery, 1 can chick peas (garbonzo beans), 4 cups veggie broth, 5 oz pasta, 2 tbsp basil",
   directions: "Chop the carrots, celery, and tomatoes into bite size pieces.

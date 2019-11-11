@@ -12,12 +12,13 @@ namespace :back_up do
       end
     end
 
-    date = Time.now.to_s
+    date = "#date of back up " + Time.now.to_s + "\n"
     recipes = JSON.parse(recipe_data.body, symbolize_names: true)
     data = date + recipes.to_s
+    file_name = './db/back_up/' + Time.now.to_s + ".rb"
 
 
-    File.write('./db/back_up/test.rb', data)
+    File.write(file_name, data)
   end
 
 

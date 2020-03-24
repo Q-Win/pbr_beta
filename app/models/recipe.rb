@@ -4,6 +4,8 @@ class Recipe < ApplicationRecord
   validates :name, uniqueness: true
 
   has_many :favorites
+  has_many :recipe_catagories
+  has_many :catagories, through: :recipe_catagories
 
   def ingredients_list
     ingredients.split(",")

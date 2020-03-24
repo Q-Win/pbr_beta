@@ -7,6 +7,10 @@ describe Catagory, type: :model do
 
   end
 
+  describe 'Relationships' do
+    it { should have_many(:recipe_catagories) }
+    it { should have_many(:catagories).through(:recipe_catagories)}
+   end
 
 
 end

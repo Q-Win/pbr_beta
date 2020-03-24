@@ -8,6 +8,11 @@ describe Recipe, type: :model do
     it { should validate_presence_of(:directions)}
   end
 
+  describe 'Relationships' do
+    it { should have_many(:recipe_catagories) }
+    it { should have_many(:catagories).through(:recipe_catagories)}
+   end
+
   before(:each) do
     @recipe_1 = Recipe.create(name: "cookies", ingredients: "flour, sugar", directions: "mix", notes: "is this here")
     @recipe_2 = Recipe.create(name: "muffins", ingredients: "flour, sugar", directions: "mix", notes: "is this here")

@@ -1,3 +1,8 @@
 <h1>Edit <%=@recipe.name%> </h1>
 
 <%= render 'form' %>
+
+<%= form_tag(recipes_path, :method => "get") do %>
+ <%= select_tag "Choose a catagory", options_for_select(@catagories) %>
+ <%= submit_tag "Enter" %>
+<%end%>

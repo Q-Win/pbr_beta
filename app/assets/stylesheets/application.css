@@ -33,7 +33,22 @@
  }
 
  .recipe-field {
-   height: 100px;
+   height: 120px;
    margin: 10px 10px 10px 10px;
    padding: 12px 24px;
+ }
+
+ .recipe-field label {
+   vertical-align: top;
+ }
+
+ .recipe-field textarea {
+   height: 90px;
+   width: 75%;
+   padding: 6px 6px;
+ }
+
+ .recipe-field input {
+   height: 30px;
+   width: 75%;
  }

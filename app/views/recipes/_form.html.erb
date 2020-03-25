@@ -1,25 +1,25 @@
 <%= form_for @recipe do |r| %>
-  <div>
+  <div class="recipe-field">
    <%= r.label :name, "Name" %>
    <%= r.text_field :name %>
   </div>
-  <div>
+  <div class="recipe-field">
    <%= r.label :ingredients, "Ingredients" %>
    <%= r.text_area :ingredients %>
   </div>
-  <div>
+  <div class="recipe-field">
    <%= r.label :directions, "Directions"%>
    <%= r.text_area :directions %>
   </div>
-  <div>
+  <div class="recipe-field">
    <%= r.label :gif, "Gif" %>
    <%= r.text_field :gif %>
   </div>
-  <div>
+  <div class="recipe-field">
    <%= r.label :video, "Video" %>
    <%= r.text_field :video %>
   </div>
-  <div>
+  <div class="recipe-field">
    <%= r.label :link, "Link" %>
    <%= r.text_field :link %>
   </div>

@@ -2,7 +2,9 @@
 
 <%= render 'form' %>
 
+<h2> Add a Catagory to this recipe</h2>
+
 <%= form_tag(recipes_path, :method => "get") do %>
  <%= select_tag "Choose a catagory", options_for_select(@catagories) %>
- <%= submit_tag "Enter" %>
+ <%= submit_tag "Add Catagory" %>
 <%end%>

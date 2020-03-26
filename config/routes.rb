@@ -10,11 +10,12 @@ Rails.application.routes.draw do
   resources :recipes, only: [:index, :create, :update, :new, :show, :edit]
   resources :users, only: [:show]
   resources :favorites, only: [:new, :create]
+  resources :irecipe_catagoriess, only: [:create, :new]
 
   namespace :api do
     namespace :v1 do
       resources :recipes, only: [:index] do
-        
+
       end
 
     end

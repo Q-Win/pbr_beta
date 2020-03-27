@@ -5,7 +5,7 @@
 <div class="section">
   <h2> Add a Catagory to this recipe</h2>
 
-  <%= form_tag(recipe_catagories_path, :method => "post") do %>
+  <%= form_tag(recipe_catagories_path(:recipe_id => @recipe.id), :method => "post") do %>
    <%= select_tag "Choose a catagory", options_for_select(@catagories) %>
    <%= submit_tag "Add Catagory" %>
   <%end%>

@@ -5,7 +5,7 @@ class RecipeCatagoriesController < ApplicationController
   end
 
   def create
-    
+    # add logic to create here
   end
 
 end

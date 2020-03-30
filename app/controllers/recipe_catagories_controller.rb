@@ -5,7 +5,9 @@ class RecipeCatagoriesController < ApplicationController
   end
 
   def create
-    # add logic to create here
+    recipe_id = params[:recipe_id].to_i
+
+    binding.pry
   end
 
 end

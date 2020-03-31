@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :favorites, only: [:new, :create]
   resources :recipe_catagories, only: [:create, :new]
-  resources :catagories, only: [:create, :new]
+  resources :catagories, only: [:index, :create, :new]
 
   namespace :api do
     namespace :v1 do

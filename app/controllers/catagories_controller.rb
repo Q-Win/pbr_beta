@@ -6,6 +6,7 @@ class CatagoriesController < ApplicationController
 
   def show
     @catagory = Catagory.find(params[:id])
+    @recipes = @catagory.recipes
   end
 
   def new

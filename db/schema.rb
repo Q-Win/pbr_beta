@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2020_03_24_205819) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "catagories", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
     t.string "name"
   end
 
@@ -28,11 +28,11 @@ ActiveRecord::Schema.define(version: 2020_03_24_205819) do
     t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
-  create_table "recipe_catagories", force: :cascade do |t|
+  create_table "recipe_categories", force: :cascade do |t|
     t.bigint "recipe_id"
-    t.bigint "catagory_id"
-    t.index ["catagory_id"], name: "index_recipe_catagories_on_catagory_id"
-    t.index ["recipe_id"], name: "index_recipe_catagories_on_recipe_id"
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_recipe_categories_on_category_id"
+    t.index ["recipe_id"], name: "index_recipe_categories_on_recipe_id"
   end
 
   create_table "recipes", force: :cascade do |t|
@@ -53,6 +53,6 @@ ActiveRecord::Schema.define(version: 2020_03_24_205819) do
 
   add_foreign_key "favorites", "recipes"
   add_foreign_key "favorites", "users"
-  add_foreign_key "recipe_catagories", "catagories"
-  add_foreign_key "recipe_catagories", "recipes"
+  add_foreign_key "recipe_categories", "categories"
+  add_foreign_key "recipe_categories", "recipes"
 end

@@ -7,11 +7,11 @@ Rails.application.routes.draw do
   delete '/logout', to: 'session#destroy'
   delete '/favorites', to: 'favorites#destroy'
 
+  resources :categories, only: [:index, :new, :create, :show]
   resources :recipes, only: [:index, :create, :update, :new, :show, :edit]
   resources :users, only: [:show]
   resources :favorites, only: [:new, :create]
-  resources :recipe_catagories, only: [:create, :new]
-  resources :catagories, only: [:index, :show, :create, :new]
+  resources :recipe_categories, only: [:create, :new]
 
   namespace :api do
     namespace :v1 do

@@ -4,6 +4,9 @@
     <%= button_to "Recipes", recipes_path, method: :get %>
   </div>
   <div>
+    <%= button_to "Categories", categories_path, method: :get %>
+  </div>
+  <div>
     <%if current_user == nil%>
       <%= button_to "Sign In", login_path %>
     <%else%>

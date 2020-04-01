@@ -23,6 +23,31 @@
    padding: 24px 12px;
  }
 
+ .navbar{
+   width: 95%;
+  margin: 16px auto;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #ccc;
+  padding: 16px;
+  text-align: center;
+  float: left; /* Float the buttons side by side */
+ }
+
+ .btn-group {
+
+ }
+
+ .btn-group input{
+  background-color: #4CAF50; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  margin: 5%;
+
+}
+
  .section{
    width: 80%;
   margin: 16px auto;

@@ -9,8 +9,8 @@ describe Recipe, type: :model do
   end
 
   describe 'Relationships' do
-    it { should have_many(:recipe_catagories) }
-    it { should have_many(:catagories).through(:recipe_catagories)}
+    it { should have_many(:recipe_categories) }
+    it { should have_many(:categories).through(:recipe_categories)}
    end
 
   before(:each) do

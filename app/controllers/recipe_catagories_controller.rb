@@ -1,4 +1,4 @@
-class RecipeCatagoriesController < ApplicationController
+class RecipeCategoriesController < ApplicationController
 
   def new
 
@@ -6,9 +6,9 @@ class RecipeCatagoriesController < ApplicationController
 
   def create
     recipe_id = params[:recipe_id].to_i
-    catagory_id = Catagory.find_by(name: params[:catagory_name]).id
-    if RecipeCatagory.where(recipe_id: recipe_id).find_by(catagory_id: catagory_id) == nil
-      RecipeCatagory.create(recipe_id: recipe_id, catagory_id: catagory_id)
+    category_id = Category.find_by(name: params[:category_name]).id
+    if RecipeCategory.where(recipe_id: recipe_id).find_by(category_id: category_id) == nil
+      RecipeCategory.create(recipe_id: recipe_id, category_id: category_id)
     end
   end
 

@@ -10,6 +10,14 @@ User.create(name: "ted", password: "test", role: 1)
 
 User.create(name: "bob", password: "test", role: 0)
 
+# Category.create(name: "Soup")
+# Category.create(name: "Mexican")
+# Category.create(name: "Italian")
+# Category.create(name: "Dessert")
+# Category.create(name: "Whole Grain")
+# Category.create(name: "Oil Free")
+# Category.create(name: "Sides")
+
 
 Recipe.create(name: "Minestrone", ingredients: "4 medium tomatoes, 1/2 cup tomato paste,
   2 medium zucchini, 2 medium carrots, 2 stalks celery, 1 can chick peas (garbonzo beans), 4 cups veggie broth, 5 oz pasta, 2 tbsp basil",

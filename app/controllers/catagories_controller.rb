@@ -1,31 +1,31 @@
-class CatagoriesController < ApplicationController
+class CategoriesController < ApplicationController
 
   def index
-    @catagories = Catagory.all
+    @categories = Category.all
   end
 
   def show
-    @catagory = Catagory.find(params[:id])
-    @recipes = @catagory.recipes
+    @category = Category.find(params[:id])
+    @recipes = @category.recipes
   end
 
   def new
-    @catagory = Catagory.new
+    @category = Category.new
   end
 
   def create
-    catagory = Catagory.new(catagory_params)
-    if catagory.save
-      redirect_to catagories_path
+    category = Category.new(category_params)
+    if category.save
+      redirect_to categories_path
     else
-      redirect_to "/catagories/new"
+      redirect_to "/categories/new"
     end
   end
 
   private
 
-  def catagory_params
-    params.require(:catagory).permit(:name)
+  def category_params
+    params.require(:category).permit(:name)
   end
 
 end

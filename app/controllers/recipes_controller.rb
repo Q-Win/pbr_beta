@@ -16,6 +16,7 @@ class RecipesController < ApplicationController
     if current_admin?
       @recipe = Recipe.find(params[:id])
       @categories = Category.all.pluck(:name)
+      @current_categories = @recipe.categories
     else
       redirect_to "/recipes"
     end

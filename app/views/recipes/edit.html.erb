@@ -3,8 +3,12 @@
 <%= render 'form' %>
 
 <div class="section">
+  <h2> Current Categories</h2>
+  <ul><% @current_categories.each do |category| %>
+    <li><%= category.name%></li>
+    <% end %>
+  </ul>
   <h2> Add a Category to this recipe</h2>
-
   <%= form_tag(recipe_categories_path(:recipe_id => @recipe.id), :method => "post") do %>
    <%= select_tag "category_name", options_for_select(@categories) %>
    <%= submit_tag "Add Category" %>

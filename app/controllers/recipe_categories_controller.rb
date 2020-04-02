@@ -9,6 +9,7 @@ class RecipeCategoriesController < ApplicationController
     category_id = Category.find_by(name: params[:category_name]).id
     if RecipeCategory.where(recipe_id: recipe_id).find_by(category_id: category_id) == nil
       RecipeCategory.create(recipe_id: recipe_id, category_id: category_id)
+      redirect_to "/recipes/#{recipe_id}/edit"
     end
   end
 

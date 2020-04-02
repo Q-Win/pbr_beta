@@ -1,5 +1,9 @@
 <h1> Categories </h1>
 
+<%if current_admin?%>
+  <%= button_to "New Category", new_category_path, method: :get%>
+<%end%>
+
 <ul>
   <% @categories.each do |category| %>
     <li><a href="categories/<%=category.id%>"><%=category.name  %></a></li>
